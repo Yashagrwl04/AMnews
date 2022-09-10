@@ -1,4 +1,4 @@
-package com.example.AMnews.util
+package com.example.AMnews.utility
 
 class Constants {
     companion object{

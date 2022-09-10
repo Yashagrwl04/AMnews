@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.AMnews.Models.Article
 import com.example.AMnews.R
 import com.example.AMnews.databinding.NewsItemBinding
-import com.example.AMnews.util.InternetConnectivity
+import com.example.AMnews.utility.InternetConnectivity
 import com.google.android.material.snackbar.Snackbar
 import com.squareup.picasso.Picasso
 

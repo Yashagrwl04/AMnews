@@ -16,7 +16,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.AMnews.Models.Article
 import com.example.AMnews.adapter.MyAdapter
 import com.example.AMnews.databinding.FragmentMainBinding
-import com.example.AMnews.repository.Repository
+import com.example.AMnews.repo.Repo
 import com.example.AMnews.viewModel.MainViewModel
 import com.example.AMnews.viewModel.MainViewModelFactory
 
@@ -35,7 +35,7 @@ class MainFragment : Fragment() , MyAdapter.OnItemClickListener{
         navController = Navigation.findNavController(view)
 
         setupRecyclerView()
-        val repository = Repository(this.requireContext())
+        val repository = Repo(this.requireContext())
         val viewModelFactory = MainViewModelFactory(repository)
         viewModel = ViewModelProvider(this, viewModelFactory).get(MainViewModel::class.java)
         viewModel.getPost("in", "d4c4e2a3e66e4f4faebe8b09d000ccfb")

@@ -1,10 +1,10 @@
-package com.example.AMnews.util
+package com.example.AMnews.utility
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkInfo
 
-object CheckConnect {
+object InternetCheck {
 
     fun checkConnectivity(context: Context) : Boolean{
         val connectivityManager = context.applicationContext.getSystemService(Context.CONNECTIVITY_SERVICE)

@@ -1,8 +1,8 @@
  package com.example.AMnews.api
 
 import android.content.Context
-import com.example.AMnews.util.Constants.Companion.BASE_URL
-import com.example.AMnews.util.InternetConnectivity
+import com.example.AMnews.utility.Constants.Companion.BASE_URL
+import com.example.AMnews.utility.InternetConnectivity
 import okhttp3.Cache
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
@@ -12,7 +12,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 
  object RetrofitInstance {
     private const val cacheSize : Long = 10 * 1024 * 1024
-    fun getClient(context: Context): SimpleApi {
+    fun getClient(context: Context): ApiInterface {
 
         val cache: Cache = Cache(context.cacheDir, cacheSize)
 
@@ -51,8 +51,8 @@ import retrofit2.converter.moshi.MoshiConverterFactory
                 .client(okHttpClient)
                 .build()
         }
-        val api: SimpleApi by lazy {
-            retrofit.create(SimpleApi::class.java)
+        val api: ApiInterface by lazy {
+            retrofit.create(ApiInterface::class.java)
         }
         return api
 
